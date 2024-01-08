@@ -1,0 +1,21 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "InventoryManagementProductG7Application",
+      "request": "launch",
+      "mainClass": "gic.project.inventory_management_product_g7.InventoryManagementProductG7Application",
+      "projectName": "test_imp"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-InventoryManagementProductG7Application<inventory_management_product_g7>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "gic.project.inventory_management_product_g7.InventoryManagementProductG7Application",
+      "projectName": "inventory_management_product_g7",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

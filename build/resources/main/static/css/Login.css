@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;1,200&family=Quicksand:wght@400;600;700&family=Roboto:ital,wght@0,500;0,700;1,300&display=swap");
+@import "https://unicons.iconscout.com/release/v4.0.0/css/line.css";
+
+:root {
+  --background-color: #d2e3c8;
+  --text-color: #86a789;
+  --text-gray: #999697;
+  --text-white: white;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--background-color);
+}
+.container {
+  max-width: 100%;
+  max-height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+.container .container_image {
+  margin-top: 600px;
+}
+
+.container .container_login {
+  font-family: "Poppins", sans-serif;
+  border: 3px solid #86a789;
+  border-radius: 20px;
+  background-color: var(--text-color);
+  /* width: 30%; */
+  padding: 30px;
+  padding-bottom: 50px;
+  position: relative;
+  top: 300px;
+  right: 20px;
+}
+.container .container_login .text_login {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--text-white);
+  text-align: center;
+}
+.container .container_login .text_small {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--background-color);
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login_name {
+  margin-top: 30px;
+  margin-left: 4px;
+}
+.login_name label {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--background-color);
+}
+.login_name input {
+  padding: 12px;
+  width: 350px;
+  border-radius: 10px;
+  border: 2px solid #86a789;
+  outline: none;
+  margin-top: 10px;
+}
+.login_password {
+  margin-top: 20px;
+  margin-left: 4px;
+}
+.login_password label {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--background-color);
+}
+.login_password input {
+  padding: 12px;
+  width: 350px;
+  border-radius: 10px;
+  border: 2px solid #86a789;
+  outline: none;
+  margin-top: 10px;
+}
+.login_button {
+  margin-top: 50px;
+  text-align: center;
+}
+.login_button button {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color);
+  padding: 12px;
+  width: 180px;
+  border-radius: 10px;
+  border: none;
+}
+.login_sign a{
+    text-decoration: none;
+    color: red;
+}
