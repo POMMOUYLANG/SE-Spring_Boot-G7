@@ -15,4 +15,6 @@ public interface UserService {
 
     // login
     Optional<User> findByEmail(String email);
+
+    // User checkUser(String email, String password);
 }

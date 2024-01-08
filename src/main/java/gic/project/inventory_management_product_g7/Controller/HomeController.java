@@ -47,6 +47,31 @@ public class HomeController {
         }
     }
 
+    // @PostMapping("/admin/login")
+    // public String login(HttpServletRequest request, HttpSession session) {
+    //     String email = request.getParameter("email");
+    //     String password = request.getParameter("password");
+
+    //     User checkUser = userService.checkUser(email, password);
+
+    //     if (checkUser != null) {
+    //         // Store the authenticated user in the session
+    //         session.setAttribute("checkUser", checkUser);
+
+    //         if ("admin".equals(checkUser.getRole())) {
+    //             return "redirect:/admin/AfterHomePage";
+    //         } else if ("user".equals(checkUser.getRole())) {
+    //             return "redirect:/admin/login";
+    //         }
+    //     } else {
+    //         // Add error message attribute to be displayed in the login page
+    //         request.setAttribute("LogInError", "Invalid username or password!");
+    //         return "LogIn";
+    //     }
+
+    //     return "redirect:/";
+    // }
+
     // User of Login
 
     @GetMapping("/user/login")
@@ -110,17 +135,17 @@ public class HomeController {
 
     @GetMapping("/admin/register")
     public String getadminRegisterPage(@ModelAttribute("admin") UserDto userDto) {
-        return "user/Register";
+        return "admin/Register";
     }
 
     @PostMapping("/admin/register")
-    public String saveAdmin(@ModelAttribute("user") UserDto userDto, Model model) {
+    public String saveAdmin(@ModelAttribute("admin") UserDto userDto, Model model) {
         userService.save(userDto);
         model.addAttribute("message","Registered Successfully");
-        return "user/Register";
+        return "admin/Register";
     }
     
-    
+    //* ************************************** */
     @GetMapping("/Home_Page")
     public String getHomePage() {
         return "HomePage";
