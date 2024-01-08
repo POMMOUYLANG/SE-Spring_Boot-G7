@@ -34,7 +34,7 @@ public class HomeController {
     }
 
     @PostMapping("admin/login")
-    public String processLogin(@RequestParam String email, @RequestParam String password) {
+    public String processLoginAdmin(@RequestParam String email, @RequestParam String password) {
         // Check credentials against the database
         Optional<User> userOptional = userService.findByEmail(email);
 
@@ -54,6 +54,32 @@ public class HomeController {
         return "user/Login";
     }
 
+    @PostMapping("user/login")
+    public String processLoginUser(@RequestParam String email, @RequestParam String password) {
+        // Check credentials against the database
+        Optional<User> userOptional = userService.findByEmail(email);
+
+        if (userOptional.isPresent() && userOptional.get().getPassword().equals(password)) {
+            // Successful login
+            return "redirect:/user/After_Home_Page"; // redirect to the dashboard or any other page
+        } else {
+            // Failed login
+            return "redirect:/user/login";
+        }
+    }
+
+    // Home Page of User
+
+     @GetMapping("/user/Home_Page")
+    public String getuserHomePage() {
+        return "user/HomePage";
+    }
+
+     @GetMapping("/user/After_Home_Page")
+    public String getuserAfterHomePage() {
+        return "user/AfterHomePage";
+    }
+
     // User of Register
 
     @GetMapping("/user/register")
@@ -68,6 +94,8 @@ public class HomeController {
         return "user/Register";
     }
 
+    // Home Page of Admin
+
      @GetMapping("/admin/Home_Page")
     public String getadminHomePage() {
         return "admin/HomePage";
@@ -78,10 +106,10 @@ public class HomeController {
         return "admin/AfterHomePage";
     }
 
-    // Admin of Login
+    // Admin of Register
 
     @GetMapping("/admin/register")
-    public String getadminRegisterPage(@ModelAttribute("user") UserDto userDto) {
+    public String getadminRegisterPage(@ModelAttribute("admin") UserDto userDto) {
         return "user/Register";
     }
 
