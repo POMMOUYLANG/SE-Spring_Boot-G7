@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Addproduct</title>
+    <title>Add Product</title>
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
   </head>
   <body>
@@ -14,7 +14,7 @@
               class="lang card shadow-lg rounded-6"
               style="background-color: 86A789">
               <div class="p-5">
-                <h4 class="text-light mt-2 text-center fw-bold mb-3">
+                <h4 class="text-light text-center fw-bold mb-3">
                   Add Product
                 </h4>
 
@@ -22,7 +22,7 @@
                   th:object="${product}"
                   th:action="@{/product/saveProduct}"
                   method="post">
-                  <div class="text-light">Product</div>
+                  <div class="text-light">Product Name</div>
                   <div class="form-floating mb-3">
                     <input
                       th:field="*{product_name}"
@@ -32,6 +32,17 @@
                       placeholder="Unsername"
                       name="product_name" />
                     <label for="product_name">Product name</label>
+                  </div>
+                  <div class="text-light">Product Code</div>
+                  <div class="form-floating mb-3">
+                    <input
+                      th:field="*{product_code}"
+                      type="text"
+                      class="form-control"
+                      id="product_code"
+                      placeholder="Producr_code"
+                      name="product_code" />
+                    <label for="product_name">Product code</label>
                   </div>
                   <div class="text-light">Country</div>
                   <div class="form-floating mb-3">

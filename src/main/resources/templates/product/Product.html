@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin View Product</title>
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
   </head>
   <body>
     <h1>Product</h1>
@@ -22,7 +22,7 @@
           </tr>
         </thead>
         <tbody class="table-group-divider">
-          <tr  th:each = "product : ${products}">
+          <tr th:each="product : ${products}">
             <td scope="row" th:text="${product.product_code}"></td>
             <td th:text="${product.product_image}"></td>
             <td th:text="${product.product_name}"></td>
@@ -30,15 +30,24 @@
             <td th:text="${product.price}"></td>
             <td th:text="${product.cost}"></td>
             <td>
-              <a href="" class="btn btn-warning">View</a>
-              <a href="" class="btn btn-success">Edit</a>
-              <a href="" class="btn btn-danger">Delete</a>
-          </td>
+              <a th:href="@{/product/listproduct}" class="btn btn-warning"
+                >View</a
+              >
+              <a
+                class="btn btn-success"
+                th:href="@{/product/updateproduct(id=${product.id})}"
+                >Edit</a
+              >
+              <a
+                th:href="@{/product/deleteproduct(id=${product.id})}"
+                class="btn btn-danger"
+                >Delete</a
+              >
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
     <a class="btn btn-info" th:href="@{/product/addproduct}">Add new Product</a>
-
   </body>
 </html>

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -24,15 +25,16 @@ public class Productontroller {
         return "product/Viewadmin";
     }
 
-    // @GetMapping("/admin/addproduct")
-    // public String getaddproduct() {
-    //     return "Addproduct";
-    // }
+    @GetMapping("/user/viewuser")
+    public String getviewuser() {
+        return "user/Viewuser";
+    }
 
-    // @GetMapping("/admin/updateproduct")
-    // public String getupdateproduct() {
-    //     return "Updateproduct";
-    // }
+    @GetMapping("/user/item_detail")
+    public String getitemdetail() {
+        return "user/Item_detail";
+    }
+    
 
     // list Product
 
@@ -55,9 +57,9 @@ public class Productontroller {
     // Save Product
 
     @PostMapping("/product/saveProduct")
-    public String SaveProduct(@ModelAttribute("product") Product product) {
+    public String saveProduct(@ModelAttribute("product") Product product) {
         productService.saveOrUpdateProduct(product);
-        return "redirect:/product/Product";
+        return "redirect:/product/listproduct";
     }
 
     // Update Product
@@ -71,11 +73,33 @@ public class Productontroller {
 
     // Delete Product
 
-    @GetMapping("/product/deleteproduct")
-    public String deleteProduct(@RequestParam("id") Long id) {
+    // @DeleteMapping("/product/deleteproduct")
+    // public String deleteProduct(@RequestParam("id") Long id) {
+    //     productService.deleteProduct(id);
+    //     return "redirect:/product/listproduct";
+    // }
+
+    @GetMapping("/product/deleteproduct/{id}")
+        public String deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
-        return "redirect:/product/Product";
-    }
+        return "redirect:/product/listproduct";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     // @GetMapping("/admin/product")
     // public String adminproduct(Model model, Principal principal) {

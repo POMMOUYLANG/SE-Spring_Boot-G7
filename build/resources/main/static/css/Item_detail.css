@@ -1,0 +1,126 @@
+body {
+    width: 100%;
+    height: auto;
+    background-color: #D2E3C8;
+    
+    justify-content: center;
+}
+h1 {
+    font-size: 20px;
+}
+h2 {
+    font-size: 20px;
+}
+h3 {
+    font-size: 18px;
+}
+/* Header */
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4F6F52;
+}
+/* Header left */
+.head-left {
+    margin-left: 10px;
+    color: #D2E3C8;
+}
+/* Header right */
+.head-right{
+    display: flex;
+    flex-direction: row;
+ 
+}
+.search-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    border: solid black 2px;
+    background-color: white;
+    border-radius: 5px;
+    color:black;
+}
+.search_icon{
+    width: 20px;
+    height: 20px;
+}
+.add-profile{
+    display: flex;
+    flex-direction: row;
+    
+    margin-right: 50px;
+    
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  margin-top: 10px;
+background: #86A789;
+}
+/* Product detail */
+.Top {
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+}
+.box-size {
+    display: flex;
+    flex-direction: row;
+}
+
+.box-size > div > div {
+    width: 60px;
+    height: 40px;
+    background-color: #ffffff;
+    margin-left: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Button */
+.btn {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.atc {
+    width: 160px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 16px;
+    background-color: red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buy {
+    width: 80px;
+    font-size: 18px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: #27C227;
+    color: white;
+}
+/* Under */
+.under {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+
+}

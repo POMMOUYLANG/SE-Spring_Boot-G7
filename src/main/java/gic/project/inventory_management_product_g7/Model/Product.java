@@ -22,7 +22,7 @@ public class Product {
     private String product_image;
 
     @Column
-    private String product_name;
+    private String product_name;    
 
     @Column
     private String country;

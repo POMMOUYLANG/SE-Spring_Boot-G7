@@ -1,0 +1,111 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/Viewuser.css}" rel="stylesheet" />
+    
+</head>
+<body>
+    <Header>
+        <div> 
+
+            <nav>
+                <div class="head-left">
+                    <h1>Price and Inventory monitoring</h1>
+                </div>
+                <div class="head-right">
+                    <div class="search-box">
+                        
+                        <div>  <input
+                            type="search"
+                            class="form-control rounded"
+                            placeholder="Search"
+                            aria-label="Search"
+                            aria-describedby="search-addon" /></div>
+                    </div>
+                    <div class="add-profile">
+                        <div><img
+                            src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png"
+                            data-src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png"
+                            alt="Shopping cart "
+                            title="Shopping cart "
+                            width="30"
+                            height=""
+                            class="lzy lazyload--done"
+                            srcset="https://cdn-icons-png.flaticon.com/128/1170/1170678.png 4x"
+                            style="margin-left: 30px; color: #d2e3c8" />
+                        </div>
+                        <div><img
+                            src="https://cdn-icons-png.flaticon.com/128/456/456283.png"
+                            data-src="https://cdn-icons-png.flaticon.com/128/456/456283.png"
+                            alt="User "
+                            title="User "
+                            width="30"
+                            height="30"
+                            class="lzy lazyload--done"
+                            srcset="https://cdn-icons-png.flaticon.com/128/456/456283.png 4x"
+                            style="margin-left: 30px; color: #d2e3c8" />
+                        </div>
+                        
+                    </div>
+                </div>
+            </nav>
+        </div>
+        </Header>
+    <section class="navigation">
+        <div style="margin-left: 10px;">
+            <h2>Product_Code</h2>
+        </div>
+        <div>
+            <h2>Product</h2>
+        </div>
+        <div>
+            <h2>Product name</h2>
+        </div>
+        <div>
+            <h2>Country</h2>
+        </div>
+        <div style="margin-left: 20px;">
+            <h2>Price</h2>
+        </div>
+        <div>
+            <h2>Quantity order</h2>
+        </div>
+        <div>
+            <h2>Quantity available</h2>
+        </div>
+    </section>
+
+    <section>
+        <section class="product-detial">
+            <div style="margin-left: 130px;">
+                <h3>199</h3>
+            </div>
+            <div class="pro_img" style="margin-left: 30px;">
+                <img
+                th:src="@{/image/Jordan.png}"
+                style="height: 80px; width: 90px" />
+            </div>
+            <div style="margin-left: 25px;" >
+                <h3>Nike</h3>
+            </div>
+            <div>
+                <h3>American (USA)</h3>
+            </div>
+            <div style="margin-left: -35px;">
+                <h3>290$</h3>
+            </div>
+            <div style="margin-left: 40px;">
+                <h3>102</h3>
+            </div>
+            <div style="margin-left: 100px;">
+                <h3>323</h3>
+            </div>
+        </section>
+
+        
+    </section>
+</body>
+</html>
