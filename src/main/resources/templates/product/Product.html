@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin View Product</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/AdminProduct.css}" />
   </head>
   <body>
-    <h1>Product</h1>
-    <div class="container-fluid">
-      <table class="table table-striped">
+    <div class="header">
+      <div class="header_left">Price and Inventory monitoring</div>
+      <div class="header_right">
+        <div class="search">
+          <input type="text" placeholder="search"/>
+        </div>
+        <div class="icon">
+          <i class="uil uil-shopping-cart"></i>
+          <i class="uil uil-user-circle"></i>
+        </div>
+      </div>
+    </div>
+    <div class="style1 w-100">
+      <table class="table">
         <thead>
           <tr>
             <th scope="col">Product Code</th>
@@ -19,6 +31,7 @@
             <th scope="col">Price</th>
             <th scope="col">Cost</th>
             <th scope="col">Action</th>
+            <th><a class="btn btn-info" th:href="@{/product/addproduct}">Add new Product</a></th>
           </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -48,6 +61,6 @@
         </tbody>
       </table>
     </div>
-    <a class="btn btn-info" th:href="@{/product/addproduct}">Add new Product</a>
+    
   </body>
 </html>
