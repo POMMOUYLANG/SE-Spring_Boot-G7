@@ -1,0 +1,115 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addproduct</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="py-1 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div
+              class="lang card shadow-lg rounded-6"
+              style="background-color: 86A789">
+              <div class="p-5">
+                <h4 class="text-light mt-2 text-center fw-bold mb-3">
+                  Add Product
+                </h4>
+
+                <form
+                  th:object="${product}"
+                  th:action="@{/product/saveProduct}"
+                  method="post">
+                  <div class="text-light">Product</div>
+                  <div class="form-floating mb-3">
+                    <input
+                      th:field="*{product_name}"
+                      type="text"
+                      class="form-control"
+                      id="product_name"
+                      placeholder="Unsername"
+                      name="product_name" />
+                    <label for="product_name">Product name</label>
+                  </div>
+                  <div class="text-light">Country</div>
+                  <div class="form-floating mb-3">
+                    <input
+                      th:field="*{country}"
+                      type="text"
+                      class="form-control"
+                      id="country"
+                      placeholder="country"
+                      name="country" />
+                    <label for="country">Country</label>
+                  </div>
+
+                  <div class="d-flex flex-row text-light">
+                    <div class="text-light">Price</div>
+                    <div class="ms-20" style="margin-left: 245px">Cost</div>
+                  </div>
+
+                  <div class="d-flex flex-row">
+                    <div class="form-floating mb-3">
+                      <input
+                        th:field="*{price}"
+                        type="text"
+                        class="form-control"
+                        id="price"
+                        name="price"
+                        placeholder="price"
+                        style="width: 258px" />
+                      <label for="price">Price</label>
+                    </div>
+                    <div class="form-floating mb-3" style="left: 20px">
+                      <input
+                        th:field="*{cost}"
+                        type="text"
+                        class="form-control"
+                        id="cost"
+                        name="cost"
+                        placeholder="cost"
+                        style="width: 259px" />
+                      <label for="cost">Cost</label>
+                    </div>
+                  </div>
+                  <div class="text-light">Image</div>
+                  <div class="form-floating mb-3">
+                    <input
+                      th:field="*{product_image}"
+                      type="file"
+                      class="form-control"
+                      id="image"
+                      name="image"
+                      placeholder="image" />
+                    <label for="image">Image</label>
+                  </div>
+                  <div class="text-light">Description</div>
+                  <div class="form-floating mb-3">
+                    <input
+                      th:field="*{description}"
+                      type="text"
+                      class="form-control"
+                      id="description mb-3"
+                      name="description"
+                      placeholder="description" />
+                    <label for="description"> Description</label>
+                  </div>
+
+                  <div class="text-center">
+                    <button
+                      type="submit"
+                      class="btn btn-light w-50 mt-2 fw-bold text-success">
+                      Save
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

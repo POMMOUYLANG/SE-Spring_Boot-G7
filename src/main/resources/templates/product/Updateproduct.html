@@ -1,0 +1,99 @@
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/User.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="py-1 bg-light">
+        <div class="container ">
+          <div class="row justify-content-center">
+            <div class="col-md-6">
+              <div class="lang card shadow-lg rounded-6 " style="background-color: 86A789;">
+                <div class="p-5">
+                  <h4 class="text-light mt-2 text-center fw-bold mb-3 ">
+                    Update Product
+                  </h4>
+                  
+                  <form>
+                    <div class="text-light">Product</div>
+                    <div class="form-floating mb-3">
+                      
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="Unsername" />
+                      <label for="floatingInput">Product name</label>
+                    </div>
+                    <div class="text-light">Country</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingEmail"
+                        placeholder="Email" />
+                      <label for="floatingPassword">Country</label>
+                    </div>
+
+                      <div class="d-flex flex-row  text-light">
+                        <div class="text-light">Price</div>
+                        <div class="ms-20" style="margin-left: 245px;">Cost</div>
+                      </div>
+
+                    <div class="d-flex flex-row">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingPassword"
+                        placeholder="Password" style="width: 258px;" />
+                      <label for="floatingPassword">Price</label>
+                    </div>
+                    <div class="form-floating mb-3" style="left: 20px;">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingPassword"
+                        placeholder="Password" style="width: 259px;" />
+                      <label for="floatingPassword">Cost</label>
+                    </div>
+                    </div>
+                    <div class="text-light">Image</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingPassword"
+                        placeholder="Password" />
+                      <label for="floatingPassword">Image</label>
+                      </div>
+                      <div class="text-light">Description</div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingPassword mb-3"
+                        placeholder="Password" />
+                      <label for="floatingPassword"> Description</label>
+                    </div>
+
+                    <div class=" text-center">
+                      <button
+                        type="submit"
+                        class="btn btn-light w-50 mt-2 fw-bold text-success">
+                        Save
+                      </button>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
