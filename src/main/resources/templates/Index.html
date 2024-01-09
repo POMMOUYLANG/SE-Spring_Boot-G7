@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/Index.css}" />
+  </head>
+  <body>
+    <h1>INVENTORY MANAGEMENT PRODUCTS</h1>
+    <div class="container">
+      <ul>
+        <a th:href="@{/admin/login}"><li>ADMINISTRATION</li></a>
+        <a th:href="@{/user/login}"><li>USER</li></a>
+      </ul>
+    </div>
+  </body>
+</html>

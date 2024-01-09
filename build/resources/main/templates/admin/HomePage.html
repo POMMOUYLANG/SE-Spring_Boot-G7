@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" th:href="@{/css/HomePage.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container_parent">
+        <div class="logo_text">IMP</div>
+        <div class="nav_text">
+          <ul>
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Product</li></a>
+            <a href="#"><li>About</li></a>
+          </ul>
+        </div>
+        <div class="login_text">
+          <ul>
+            <a th:href="@{/admin/login}"><li>Login</li></a>
+            <i class="uil uil-user-circle"></i>
+          </ul>
+        </div>
+      </div>
+      <div class="container_child">
+        <div class="container_text">
+          <div class="text_big">
+            Inventory Management <br />
+            Products
+          </div>
+          <div class="text_small">
+            Inventory management refers to the process of ordering, storing,
+            using, and selling a company's inventory.
+          </div>
+        </div>
+        <div class="container_image">
+          <img th:src="@{/image/background.png}" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

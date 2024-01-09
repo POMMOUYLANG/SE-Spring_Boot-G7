@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+    <link rel="stylesheet" th:href="@{/css/Register.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="container_image">
+        <img th:src="@{/image/login_register.png}" alt="" />
+      </div>
+      <div class="container_register">
+        <div class="message" th:if="${message != null}">[[${message}]]</div>
+        <div class="text_register">Registration</div>
+        <div class="text_small">Create your account.</div>
+        <form
+          th:action="@{/admin/register}"
+          method="post"
+          role="form"
+          th:object="${admin}">
+          <div class="register_name">
+            <label for="username">Username: </label> <br />
+            <input
+              th:field="*{username}"
+              type="text"
+              placeholder="username"
+              id="usernmae"
+              name="username"
+              required />
+          </div>
+          <div class="register_email">
+            <label for="email">Email: </label> <br />
+            <input
+              th:field="*{email}"
+              type="email"
+              placeholder="email@gmal.com"
+              id="email"
+              name="email"
+              required />
+          </div>
+          <div class="register_password">
+            <label for="password">Password: </label> <br />
+            <input
+              th:field="*{password}"
+              type="password"
+              placeholder="Password"
+              id="password"
+              name="password"
+              required />
+          </div>
+          <div class="register_checkbox">
+            <input type="checkbox" />
+            <label for="">REMEMBER ME</label>
+          </div>
+          <div class="register_button">
+            <button type="submit" value="Register">Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

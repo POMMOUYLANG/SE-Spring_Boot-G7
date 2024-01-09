@@ -1,0 +1,177 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Admin</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/LinkStyle.css}" />
+  </head>
+  <body>
+    <div style="width: 100%; height: 100%; display: flex; background-color:D2E3C8;">
+    <div
+      class="justify-content-center btn-info"
+      style="width: auto; height: 100%; background-color: D2E3C8">
+      <div
+        class="d-flex flex-row text text-center rounded-6"
+        style="
+          width: auto;
+          height: 50px;
+          background-color: 4F6F52;
+          padding: 20px;
+          align-items: center;
+        ">
+        <div style="margin-left: 10px; color: aliceblue">
+          Price and Ineventory monitoring
+        </div>
+        <div style="margin-left: 59%">
+          <input
+            type="search"
+            class="form-control rounded"
+            placeholder="Search"
+            aria-label="Search"
+            aria-describedby="search-addon" />
+        </div>
+        <div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png"
+            data-src="https://cdn-icons-png.flaticon.com/128/1170/1170678.png"
+            alt="Shopping cart "
+            title="Shopping cart "
+            width="30"
+            height=""
+            class="lzy lazyload--done"
+            srcset="https://cdn-icons-png.flaticon.com/128/1170/1170678.png 4x"
+            style="margin-left: 30px; color: #d2e3c8" />
+        </div>
+        <div>
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/456/456283.png"
+            data-src="https://cdn-icons-png.flaticon.com/128/456/456283.png"
+            alt="User "
+            title="User "
+            width="30"
+            height="30"
+            class="lzy lazyload--done"
+            srcset="https://cdn-icons-png.flaticon.com/128/456/456283.png 4x"
+            style="margin-left: 30px; color: #d2e3c8" />
+        </div>
+      </div>
+
+      <div
+        class="d-flex flex-row text text-center"
+        style="
+          width: auto;
+          height: 50px;
+          background-color: 86A789;
+          border-radius: 10px;
+          align-items: center;
+          gap: 140px;
+          color: aliceblue;
+          margin-top: 8px;
+        ">
+        <div style="margin-left: 10px">Product_Code</div>
+        <div>Product</div>
+        <div>Product_Name</div>
+        <div>Country</div>
+        <div>Price</div>
+        <div>Cost</div>
+        <div>Actions</div>
+        <button
+          style="
+            height: 35px;
+            width: 100px;
+            margin-right: 35px;
+            border-radius: 10px;
+            background-color: yellow;
+            color: 4F6F52;
+            border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+          ">
+          Add
+          <i class="uil uil-plus-circle"></i>
+        </button>
+      </div>
+      <!-- product1 -->
+      <div
+        class="d-flex flex-row"
+        style="
+          width: auto;
+          height: 70px;
+          background-color: 86A789;
+          margin-top: 5px;
+          align-items: center;
+          color: aliceblue;
+          align-items: center;
+        ">
+        <div style="margin-left: 20px">199</div>
+        <div
+          style="
+            width: 90px;
+            height: 70px;
+            background-color: 50C6EB;
+            border-radius: 5px;
+            margin-left: 12%;
+          ">
+          <img
+            th:src="@{/image/Jordan.png}"
+            style="height: 70px; width: 90px" />
+        </div>
+        <div style="margin-left: 9.5%">Jordan</div>
+        <div style="margin-left: 12%">USA</div>
+        <div style="margin-left: 10%">299$</div>
+        <div style="margin-left: 9%">1</div>
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+            border-radius: 10px;
+            margin-left: 5%;
+          ">
+          <div
+            style="
+              width: 100px;
+              height: 35px;
+              background-color: 008000;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 10px;
+            ">
+            View
+          </div>
+
+          <div
+            style="
+              width: 100px;
+              height: 35px;
+              background-color: 0000FF;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 10px;
+            ">
+            Update
+          </div>
+
+          <div
+            style="
+              width: 100px;
+              height: 35px;
+              background-color: FF0000;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 10px;
+            ">
+            Delete
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </body>
+</html>
