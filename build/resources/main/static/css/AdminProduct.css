@@ -18,12 +18,13 @@ body {
 /* Header */
 
 .header {
+  max-width: 100%;
   max-height: 80px;
   padding: 20px;
+  background-color: var(--text-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--text-color);
 }
 .header_left {
   font-family: "Poppins", sans-serif;
@@ -32,7 +33,6 @@ body {
   font-weight: 600;
 }
 .header_right {
-  width: 38%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,7 +41,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  position: relative;
+  right: 20px;
 }
 .search input {
   width: 400px;
@@ -52,16 +54,16 @@ body {
   padding-left: 15px;
 }
 .search button {
+  font-family: "Poppins", sans-serif;
   width: 120px;
-  padding: 10px;
+  padding: 7px;
   border: none;
   border-radius: 10px;
   background-color: blue;
 }
-.search button a{
+.search button a {
   text-decoration: none;
   color: white;
-
 }
 .icon {
   width: 60px;
@@ -91,20 +93,24 @@ body {
   padding: 20px;
   color: #86a789;
 }
-.table_list{
+.table_list {
   width: 100%;
-
 }
 .action_all {
   width: 200px;
 }
-.action_three{
+.action_three {
+  font-family: "Poppins", sans-serif;
+
   display: flex;
   gap: 15px;
 }
-img{
-  width: 60px;
+img {
+  width: 70px;
 }
-.table_list tr td{
+.table_list tr td {
   padding-left: 20px;
+}
+tbody tr td{
+  font-family: "Poppins", sans-serif;
 }

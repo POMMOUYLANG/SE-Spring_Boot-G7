@@ -5,8 +5,9 @@
     <title>Update Product</title>
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     <link th:href="@{/css/User.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/LinkStyle.css}">
   </head>
-  <body style="background-color: #d2e3c8;">
+  <body style="background-color: #d2e3c8">
     <div class="py-1 bg-#d2e3c8">
       <div class="container">
         <div class="row justify-content-center">
@@ -94,11 +95,11 @@
                     <input
                       class="form-control"
                       placeholder="product_image"
-                      type="file"
+                      type="text"
                       id="productImage"
                       name="product_image"
                       th:field="${product.product_image}"
-                      required />
+                       />
                     <label for="product_image">Image</label>
                   </div>
                   <div class="text-light">Description</div>
@@ -110,10 +111,10 @@
                       id="description"
                       name="description"
                       th:field="${product.description}"
-                      required  />
+                      required />
                     <label for="description"> Description</label>
                   </div>
-
+                  <div class="back_product"><a th:href="@{/product/listproduct}">Back Here</a></div>
                   <div class="text-center">
                     <button
                       type="submit"

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import gic.project.inventory_management_product_g7.Model.Product;
 import gic.project.inventory_management_product_g7.Service.ProductService;
 
+
 @Controller
 public class Productontroller {   
     
@@ -28,6 +29,12 @@ public class Productontroller {
     public String getviewuser() {
         return "user/Viewuser";
     }
+    
+    @GetMapping("/user/viewusernon")
+    public String getviewusernon() {
+        return "user/Viewuser_non";
+    }
+    
 
     @GetMapping("/user/item_detail")
     public String getitemdetail() {
