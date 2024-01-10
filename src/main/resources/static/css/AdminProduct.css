@@ -59,11 +59,16 @@ body {
   padding: 7px;
   border: none;
   border-radius: 10px;
-  background-color: blue;
+  background-color: #d2e3c8;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 .search button a {
   text-decoration: none;
-  color: white;
+  color: var(--text-color);
 }
 .icon {
   width: 60px;
@@ -109,7 +114,8 @@ img {
   width: 70px;
 }
 .table_list tr td {
-  padding-left: 20px;
+  padding-left: 30px;
+  padding-top: 10px;
 }
 tbody tr td{
   font-family: "Poppins", sans-serif;

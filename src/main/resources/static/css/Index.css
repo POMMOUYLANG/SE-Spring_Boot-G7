@@ -35,3 +35,9 @@ h1 {
     text-decoration: none;
     color: var(--text-color);
 }
+.welcome img{
+  width: 500px;
+  position: relative;
+  left: 550px;
+  top: 90px;
+}

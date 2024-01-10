@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin View Product</title>
+    <title>Inventory Management Product</title>
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" />
     <link rel="stylesheet" th:href="@{/css/AdminProduct.css}" />
   </head>
@@ -12,12 +12,17 @@
       <div class="header_left">Price and Inventory monitoring</div>
       <div class="header_right">
         <div class="search">
-          <input type="text" placeholder="search"/>
-          <button><a th:href="@{/product/addproduct}">Add</a></button>
+          <input type="text" placeholder="search" />
+          <button>
+            <a th:href="@{/product/addproduct}">Add</a
+            ><i class="uil uil-plus-circle"></i>
+          </button>
         </div>
         <div class="icon">
           <i class="uil uil-shopping-cart"></i>
-          <a th:href="@{/admin/After_Home_Page}"><i class="uil uil-user-circle"></i></a>
+          <a th:href="@{/admin/After_Home_Page}"
+            ><i class="uil uil-user-circle"></i
+          ></a>
         </div>
       </div>
     </div>
@@ -35,34 +40,35 @@
             <!-- <th class="action_add"></th> -->
           </tr>
         </thead>
-        <tbody class="table_listtable-group-divider">
+        <tbody class="table_list table-group-divider">
           <tr th:each="product : ${products}">
             <td scope="row" th:text="${product.product_code}"></td>
             <!-- <td th:text="${product.product_image}"></td> -->
-            <td><img th:src="@{/image/Jordan.png}" alt=""></td>
+            <td><img th:src="@{/image/Jordan.png}" alt="" /></td>
             <td th:text="${product.product_name}"></td>
             <td th:text="${product.country}"></td>
             <td th:text="${product.price}"></td>
             <td th:text="${product.cost}"></td>
-            <td><div class="action_three">
-              <a th:href="@{/product/listproduct}" class="btn btn-warning"
-                >View</a
-              >
-              <a
-                class="btn btn-success"
-                th:href="@{/product/updateproduct/{id}(id=${product.id})}"
-                >Edit</a
-              >
-              <a
-              th:href="@{/product/deleteproduct/{id}(id=${product.id})}"
-                class="btn btn-danger"
-                >Delete</a
-              >
-            </div></td>
+            <td>
+              <div class="action_three">
+                <a th:href="@{/product/listproduct}" class="btn btn-warning"
+                  >View</a
+                >
+                <a
+                  class="btn btn-success"
+                  th:href="@{/product/updateproduct/{id}(id=${product.id})}"
+                  >Edit</a
+                >
+                <a
+                  th:href="@{/product/deleteproduct/{id}(id=${product.id})}"
+                  class="btn btn-danger"
+                  >Delete</a
+                >
+              </div>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
-    
   </body>
 </html>
