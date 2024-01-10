@@ -6,8 +6,8 @@
     <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
     <link th:href="@{/css/User.css}" rel="stylesheet" />
   </head>
-  <body>
-    <div class="py-1 bg-light">
+  <body style="background-color: #d2e3c8;">
+    <div class="py-1 bg-#d2e3c8">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6">
@@ -19,41 +19,42 @@
                   Update Product
                 </h4>
 
-                <form
-                  th:object="${product}"
-                  th:action="@{/product/saveProduct}"
-                  method="post">
+                <form method="post" th:action="@{/product/saveProduct}">
+                  <input type="hidden" th:field="${product.id}" />
                   <div class="text-light">Product Name</div>
                   <div class="form-floating mb-3">
                     <input
-                      th:field="*{product_name}"
-                      type="text"
                       class="form-control"
-                      id="product_name"
                       placeholder="Unsername"
-                      name="product_name" />
+                      type="text"
+                      id="productName"
+                      name="product_name"
+                      th:field="${product.product_name}"
+                      required />
                     <label for="product_name">Product name</label>
                   </div>
                   <div class="text-light">Product Code</div>
                   <div class="form-floating mb-3">
                     <input
-                      th:field="*{product_code}"
-                      type="text"
                       class="form-control"
-                      id="product_code"
                       placeholder="Producr_code"
-                      name="product_code" />
-                    <label for="product_name">Product code</label>
+                      type="text"
+                      id="productCode"
+                      name="product_code"
+                      th:field="${product.product_code}"
+                      required />
+                    <label for="product_code">Product code</label>
                   </div>
                   <div class="text-light">Country</div>
                   <div class="form-floating mb-3">
                     <input
-                      th:field="*{country}"
-                      type="text"
                       class="form-control"
-                      id="country"
                       placeholder="country"
-                      name="country" />
+                      type="text"
+                      id="country"
+                      name="country"
+                      th:field="${product.country}"
+                      required />
                     <label for="country">Country</label>
                   </div>
 
@@ -65,23 +66,25 @@
                   <div class="d-flex flex-row">
                     <div class="form-floating mb-3">
                       <input
-                        th:field="*{price}"
-                        type="text"
                         class="form-control"
+                        placeholder="price"
+                        type="text"
                         id="price"
                         name="price"
-                        placeholder="price"
+                        th:field="${product.price}"
+                        required
                         style="width: 258px" />
                       <label for="price">Price</label>
                     </div>
                     <div class="form-floating mb-3" style="left: 20px">
                       <input
-                        th:field="*{cost}"
-                        type="text"
                         class="form-control"
+                        placeholder="cost"
+                        type="text"
                         id="cost"
                         name="cost"
-                        placeholder="cost"
+                        th:field="${product.cost}"
+                        required
                         style="width: 259px" />
                       <label for="cost">Cost</label>
                     </div>
@@ -89,23 +92,25 @@
                   <div class="text-light">Image</div>
                   <div class="form-floating mb-3">
                     <input
-                      th:field="*{product_image}"
-                      type="file"
                       class="form-control"
-                      id="image"
-                      name="image"
-                      placeholder="image" />
-                    <label for="image">Image</label>
+                      placeholder="product_image"
+                      type="file"
+                      id="productImage"
+                      name="product_image"
+                      th:field="${product.product_image}"
+                      required />
+                    <label for="product_image">Image</label>
                   </div>
                   <div class="text-light">Description</div>
                   <div class="form-floating mb-3">
                     <input
-                      th:field="*{description}"
-                      type="text"
                       class="form-control"
-                      id="description mb-3"
+                      placeholder="description"
+                      type="text"
+                      id="description"
                       name="description"
-                      placeholder="description" />
+                      th:field="${product.description}"
+                      required  />
                     <label for="description"> Description</label>
                   </div>
 
@@ -125,3 +130,86 @@
     </div>
   </body>
 </html>
+<!-- <html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Product</title>
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet" />
+    <link th:href="@{/css/User.css}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="py-1 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div
+              class="lang card shadow-lg rounded-6"
+              style="background-color: 86A789"
+            >
+              <div class="p-5">
+                <h4 class="text-light text-center fw-bold mb-3">
+                  Update Product
+                </h4>
+
+                <form method="post" th:action="@{/product/saveProduct}">
+                  <input type="hidden" th:field="${product.id}" />
+                  <label for="productCode">Product Code:</label>
+                  <input
+                    type="text"
+                    id="productCode"
+                    name="product_code"
+                    th:field="${product.product_code}"
+                    required
+                  />
+                  <label for="productCode">Product Image:</label>
+                  <input
+                    type="text"
+                    id="productImage"
+                    name="product_image"
+                    th:field="${product.product_image}"
+                    required
+                  />
+                  <label for="productImage">Product Name:</label>
+                  <input
+                    type="text"
+                    id="productName"
+                    name="product_name"
+                    th:field="${product.product_name}"
+                    required
+                  />
+                  <label for="country">Country:</label>
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    th:field="${product.country}"
+                    required
+                  />
+                  <label for="price">price:</label>
+                  <input
+                    type="text"
+                    id="price"
+                    name="price"
+                    th:field="${product.price}"
+                    required
+                  />
+                  <label for="cost">cost:</label>
+                  <input
+                    type="text"
+                    id="cost"
+                    name="cost"
+                    th:field="${product.cost}"
+                    required
+                  />
+
+                  <button type="submit">Update</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> -->

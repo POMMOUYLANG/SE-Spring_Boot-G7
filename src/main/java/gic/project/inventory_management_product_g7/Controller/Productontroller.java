@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import gic.project.inventory_management_product_g7.Model.Product;
 import gic.project.inventory_management_product_g7.Service.ProductService;
@@ -34,9 +33,8 @@ public class Productontroller {
     public String getitemdetail() {
         return "user/Item_detail";
     }
-    
 
-    // list Product
+
 
     @GetMapping("/product/listproduct")
     public String listProduct(Model model) {
@@ -45,16 +43,12 @@ public class Productontroller {
         return "product/Product";
     }
 
-    // Add product
-
     @GetMapping("/product/addproduct")
-    public String AddProduct(Model model) {
+    public String addProductForm(Model model) {
         Product product = new Product();
         model.addAttribute("product", product);
         return "product/Addproduct";
     }
-
-    // Save Product
 
     @PostMapping("/product/saveProduct")
     public String saveProduct(@ModelAttribute("product") Product product) {
@@ -62,28 +56,93 @@ public class Productontroller {
         return "redirect:/product/listproduct";
     }
 
-    // Update Product
-
-    @GetMapping("/product/updateproduct")
-    public String UpdateProduct(@RequestParam("id") Long id, Model model) {
+    @GetMapping("/product/updateproduct/{id}")
+    public String updateProductForm(@PathVariable Long id, Model model) {
         Product product = productService.getProductById(id);
         model.addAttribute("product", product);
+        // return "product/UpdateProductForm";
         return "product/Updateproduct";
     }
 
-    // Delete Product
-
-    // @DeleteMapping("/product/deleteproduct")
-    // public String deleteProduct(@RequestParam("id") Long id) {
-    //     productService.deleteProduct(id);
-    //     return "redirect:/product/listproduct";
-    // }
-
     @GetMapping("/product/deleteproduct/{id}")
-        public String deleteProduct(@PathVariable Long id) {
+    public String deleteProduct(@PathVariable Long id) {
         productService.deleteProduct(id);
         return "redirect:/product/listproduct";
-}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     // list Product
+
+//     @GetMapping("/product/listproduct")
+//     public String listProduct(Model model) {
+//         List<Product> products = productService.getAllProduct();
+//         model.addAttribute("products", products);
+//         return "product/Product";
+//     }
+
+//     // Add product
+
+//     @GetMapping("/product/addproduct")
+//     public String AddProduct(Model model) {
+//         Product product = new Product();
+//         model.addAttribute("product", product);
+//         return "product/Addproduct";
+//     }
+
+//     // Save Product
+
+//     @PostMapping("/product/saveProduct")
+//     public String saveProduct(@ModelAttribute("product") Product product) {
+//         productService.saveOrUpdateProduct(product);
+//         return "redirect:/product/listproduct";
+//     }
+
+//     // Update Product
+
+//     @GetMapping("/product/updateproduct")
+//     public String UpdateProduct(@RequestParam("id") Long id, Model model) {
+//         Product product = productService.getProductById(id);
+//         model.addAttribute("product", product);
+//         return "product/Updateproduct";
+//     }
+
+//     // Delete Product
+
+//     // @DeleteMapping("/product/deleteproduct")
+//     // public String deleteProduct(@RequestParam("id") Long id) {
+//     //     productService.deleteProduct(id);
+//     //     return "redirect:/product/listproduct";
+//     // }
+
+//     @GetMapping("/product/deleteproduct/{id}")
+//         public String deleteProduct(@PathVariable Long id) {
+//         productService.deleteProduct(id);
+//         return "redirect:/product/listproduct";
+// }
 
 
 

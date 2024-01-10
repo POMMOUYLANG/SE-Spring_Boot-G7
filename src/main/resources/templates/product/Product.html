@@ -13,6 +13,7 @@
       <div class="header_right">
         <div class="search">
           <input type="text" placeholder="search"/>
+          <button><a th:href="@{/product/addproduct}">Add</a></button>
         </div>
         <div class="icon">
           <i class="uil uil-shopping-cart"></i>
@@ -20,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="style1">
+    <div class="style_box">
       <table class="table">
         <thead>
           <tr>
@@ -30,11 +31,11 @@
             <th scope="col">Country</th>
             <th scope="col">Price</th>
             <th scope="col">Cost</th>
-            <th scope="col">Action</th>
-            <th><a class="btn btn-info" th:href="@{/product/addproduct}">Add new Product</a></th>
+            <th class="action_all" scope="col">Action</th>
+            <!-- <th class="action_add"></th> -->
           </tr>
         </thead>
-        <tbody class="table-group-divider">
+        <tbody class="table_listtable-group-divider">
           <tr th:each="product : ${products}">
             <td scope="row" th:text="${product.product_code}"></td>
             <!-- <td th:text="${product.product_image}"></td> -->
@@ -43,21 +44,21 @@
             <td th:text="${product.country}"></td>
             <td th:text="${product.price}"></td>
             <td th:text="${product.cost}"></td>
-            <td>
+            <td><div class="action_three">
               <a th:href="@{/product/listproduct}" class="btn btn-warning"
                 >View</a
               >
               <a
                 class="btn btn-success"
-                th:href="@{/product/updateproduct(id=${product.id})}"
+                th:href="@{/product/updateproduct/{id}(id=${product.id})}"
                 >Edit</a
               >
               <a
-                th:href="@{/product/deleteproduct(id=${product.id})}"
+              th:href="@{/product/deleteproduct/{id}(id=${product.id})}"
                 class="btn btn-danger"
                 >Delete</a
               >
-            </td>
+            </div></td>
           </tr>
         </tbody>
       </table>
