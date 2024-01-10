@@ -104,3 +104,12 @@ body {
     text-decoration: none;
     color: red;
 }
+.backhome{
+  margin-top: 15px;
+
+}
+.backhome a{
+  /* text-decoration: none; */
+  color: var(--background-color);
+  font-size: 16px;
+}

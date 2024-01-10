@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="style1 w-100">
+    <div class="style1">
       <table class="table">
         <thead>
           <tr>
@@ -37,7 +37,8 @@
         <tbody class="table-group-divider">
           <tr th:each="product : ${products}">
             <td scope="row" th:text="${product.product_code}"></td>
-            <td th:text="${product.product_image}"></td>
+            <!-- <td th:text="${product.product_image}"></td> -->
+            <td><img th:src="@{/image/Jordan.png}" alt=""></td>
             <td th:text="${product.product_name}"></td>
             <td th:text="${product.country}"></td>
             <td th:text="${product.price}"></td>
